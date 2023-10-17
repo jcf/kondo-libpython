@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "kondo-libpython"
+version = "0.0.0"
+description = "Linting Python written in Clojure"
+authors = ["James Conroy-Finn <github@invetica.co.uk>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+numpy = "^1.26.1"
+sentence-transformers = "^2.2.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

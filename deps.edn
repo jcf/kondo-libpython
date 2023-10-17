@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps
+ {clj-python/libpython-clj            {:mvn/version "2.025"}
+  org.clojure/clojure                 {:mvn/version "1.11.1"}}}

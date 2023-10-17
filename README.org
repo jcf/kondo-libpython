@@ -1,0 +1,30 @@
+#+title: clj-kondo + libpython-clj
+
+Linting Python written in Clojure.
+
+* Dependencies
+#+begin_src clojure :backend babashka :results output verbatim :export results :wrap src clojure
+(require
+ '[clojure.pprint :refer [pprint]])
+
+(-> "deps.edn"
+    slurp
+    read-string
+    :deps
+    pprint)
+#+end_src
+
+#+results:
+#+begin_src clojure
+{clj-python/libpython-clj #:mvn{:version "2.025"},
+ org.clojure/clojure #:mvn{:version "1.11.1"}}
+#+end_src
+
+* Lint
+#+begin_src sh :results output verbatim
+clj-kondo --lint src
+#+end_src
+
+#+results:
+: src/python.clj:25:21: error: Unresolved symbol: tolist
+: linting took 9ms, errors: 1, warnings: 0

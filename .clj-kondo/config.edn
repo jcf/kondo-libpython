@@ -1,0 +1,17 @@
+{:linters
+ {:unresolved-namespace
+  {:exclude [spatial.distance]}
+
+  ;; This exclusion would hopefully resolve the issue with `(py/py. ndarray
+  ;; tolist)`, but it doesn't.
+  :unresolved-symbol
+  {:exclude [SentenceTransformer
+             (libpython-clj2.python/py.)
+             (libpython-clj2.python/py.-)]}
+
+  ;; I have to exclude `libpython-clj2.python/py` instead of
+  ;; `libpython-clj2.python/py.`, I guess because the dot is a special case
+  ;; constructor elsewhere in Clojure?
+  :unresolved-var
+  {:exclude [libpython-clj2.python/py
+             libpython-clj2.python/py.]}}}

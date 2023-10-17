@@ -1,0 +1,11 @@
+*.class
+*.jar
+/.clj-kondo/.cache
+/.cpcache
+/.devenv
+/.direnv
+/.venv
+/classes
+/target
+pom.xml
+pom.xml.asc
